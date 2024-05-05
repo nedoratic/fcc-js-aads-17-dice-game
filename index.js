@@ -26,6 +26,20 @@ let totalScore = 0;
 let round = 1;
 let rolls = 0;
 
+// Roll Dice Function
+const rollDice = () => {
+	diceValuesArr = [];
+
+	for (let i = 0; i < 5; i++) {
+		const randomDice = Math.floor(Math.random() * 6) + 1;
+		diceValuesArr.push(randomDice);
+	}
+
+	listOfAllDice.forEach((dice, index) => {
+		dice.textContent = diceValuesArr[index];
+	});
+};
+
 // Rules Button Event Listener
 rulesBtn.addEventListener('click', () => {
 	isModalShowing = !isModalShowing;

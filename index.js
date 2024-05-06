@@ -46,6 +46,17 @@ const updateRadioOption = (optionNode, score) => {
 	scoreSpans[optionNode].textContent = `, score = ${score}`;
 };
 
+// Roll Dice Button Event Listener
+rollDiceBtn.addEventListener('click', () => {
+	if (rolls === 3) {
+		alert('You have made three rolls this round. Please select a score.');
+	} else {
+		rolls++;
+		rollDice();
+		updateStats();
+	}
+});
+
 // Rules Button Event Listener
 rulesBtn.addEventListener('click', () => {
 	isModalShowing = !isModalShowing;

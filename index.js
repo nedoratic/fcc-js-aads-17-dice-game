@@ -46,6 +46,9 @@ const updateRadioOption = (optionNode, score) => {
 	scoreSpans[optionNode].textContent = `, score = ${score}`;
 };
 
+// Get Highest Duplicates
+const getHighestDuplicates = (arr) => {};
+
 // Roll Dice Button Event Listener
 rollDiceBtn.addEventListener('click', () => {
 	if (rolls === 3) {

@@ -46,6 +46,9 @@ const updateRadioOption = (optionNode, score) => {
 	scoreSpans[optionNode].textContent = `, score = ${score}`;
 };
 
+// Reset Game
+const resetGame = () => {};
+
 // Update Score
 const updateScore = (selectedValue, achieved) => {
 	totalScore += parseInt(selectedValue);

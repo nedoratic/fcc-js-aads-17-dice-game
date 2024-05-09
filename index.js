@@ -91,6 +91,18 @@ const getHighestDuplicates = (arr) => {
 	updateRadioOption(5, 0);
 };
 
+// Reset Radio Option
+const resetRadioOption = () => {
+	scoreInputs.forEach((input) => {
+		input.disabled = true;
+		input.checked = false;
+	});
+
+	scoreSpans.forEach((span) => {
+		span.textContent = '';
+	});
+};
+
 // Roll Dice Button Event Listener
 rollDiceBtn.addEventListener('click', () => {
 	if (rolls === 3) {

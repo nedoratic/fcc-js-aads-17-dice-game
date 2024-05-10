@@ -130,8 +130,10 @@ rollDiceBtn.addEventListener('click', () => {
 		alert('You have made three rolls this round. Please select a score.');
 	} else {
 		rolls++;
+		resetRadioOption();
 		rollDice();
 		updateStats();
+		getHighestDuplicates(diceValuesArr);
 	}
 });
 

@@ -46,9 +46,6 @@ const updateRadioOption = (optionNode, score) => {
 	scoreSpans[optionNode].textContent = `, score = ${score}`;
 };
 
-// Reset Game
-const resetGame = () => {};
-
 // Update Score
 const updateScore = (selectedValue, achieved) => {
 	totalScore += parseInt(selectedValue);
@@ -104,6 +101,27 @@ const resetRadioOption = () => {
 	scoreSpans.forEach((span) => {
 		span.textContent = '';
 	});
+};
+
+// Reset Game
+const resetGame = () => {
+	diceValuesArr = [0, 0, 0, 0, 0];
+	score = 0;
+	totalScore = 0;
+	round = 1;
+	rolls = 0;
+
+	listOfAllDice.forEach((dice, index) => {
+		dice.textContent = diceValuesArr[index];
+	});
+
+	totalScoreText.textContent = totalScore;
+	scoreHistory.innerHTML = '';
+
+	currentRoundRollsText.textContent = rolls;
+	currentRoundText.textContent = round;
+
+	resetRadioOption();
 };
 
 // Roll Dice Button Event Listener
